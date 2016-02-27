@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.lucee</groupId>
   <artifactId>commons-compress</artifactId>
-  <version>1.3.0</version>
+  <version>1.9.0</version>
   <name>Apache Commons Compress</name>
   <packaging>bundle</packaging>
 
@@ -95,7 +95,7 @@
                  <artifactItem>
                    <groupId>org.apache.commons</groupId>
                     <artifactId>commons-compress</artifactId>
-                    <version>1.3</version>
+                    <version>1.9</version>
                    <type>jar</type>
                    <overWrite>false</overWrite>
                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
@@ -119,8 +119,8 @@
             <Bundle-SymbolicName>org.lucee.commons.compress</Bundle-SymbolicName>
             <Bundle-Description>OSGI version of jar ${project.name}</Bundle-Description>
             <Export-Package>*</Export-Package>
-            <!-- <Import-Package>*</Import-Package>
-            <DynamicImport-Package>*</DynamicImport-Package> -->
+            <Import-Package>!org.tukaani.xz</Import-Package>
+            <DynamicImport-Package>org.tukaani.xz</DynamicImport-Package>
           </instructions>
         </configuration>
         <extensions>true</extensions>
