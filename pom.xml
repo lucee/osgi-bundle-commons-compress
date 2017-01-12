@@ -119,8 +119,11 @@
             <Bundle-SymbolicName>org.lucee.commons.compress</Bundle-SymbolicName>
             <Bundle-Description>OSGI version of jar ${project.name}</Bundle-Description>
             <Export-Package>*</Export-Package>
-            <Import-Package>!org.tukaani.xz</Import-Package>
+            <!-- <Require-Bundle></Require-Bundle> -->
+            <!-- <Require-Bundle-Fragment></Require-Bundle-Fragment> -->
+            <Import-Package>!org.tukaani.xz,*</Import-Package>
             <DynamicImport-Package>org.tukaani.xz</DynamicImport-Package>
+            <!-- <Fragment-Host></Fragment-Host> -->
           </instructions>
         </configuration>
         <extensions>true</extensions>
